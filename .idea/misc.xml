@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_constraint_layout.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_grid_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_linear_layout.xml" value="0.25416666666666665" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_relative_layout.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_main.xml" value="0.24010416666666667" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/fragment_calculator_linearlayout.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

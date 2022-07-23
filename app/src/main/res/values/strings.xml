@@ -1,3 +1,4 @@
-<resources>
-    <string name="app_name">ViewsAndLayouts1</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" tools:ignore="Typos">ViewsAndLayouts1</string>
+    <string name="spannable_string_text">Calculator built with LinearLayout, RelativeLayout, GridLayout, ConstraintLayout</string>
 </resources>
