@@ -28,15 +28,15 @@ class CalculatorActivity : AppCompatActivity() {
         setClickListeners()
     }
 
-    private fun updateText(stringToAdd: String) {
-        val oldText = display.text.toString()
-        val cursorPosition = display.selectionStart
-        display.setText(String.format("%s%s%s",oldText.substring(0, cursorPosition), stringToAdd, oldText.substring(cursorPosition)))
-        display.setSelection(cursorPosition + stringToAdd.length)
-    }
-
     private fun setClickListeners() {
         fun strFromRes(@IdRes id: Int) = resources.getString(id)
+
+        fun updateText(stringToAdd: String) {
+            val oldText = display.text.toString()
+            val cursorPosition = display.selectionStart
+            display.setText(String.format("%s%s%s",oldText.substring(0, cursorPosition), stringToAdd, oldText.substring(cursorPosition)))
+            display.setSelection(cursorPosition + stringToAdd.length)
+        }
 
         findViewById<Button>(R.id.decimalButton).setOnClickListener { updateText(strFromRes(R.string.decimalText)) }
         findViewById<Button>(R.id.button0).setOnClickListener { updateText(strFromRes(R.string.zeroText)) }
@@ -57,13 +57,18 @@ class CalculatorActivity : AppCompatActivity() {
         findViewById<Button>(R.id.addButton).setOnClickListener { updateText(strFromRes(R.string.addText)) }
         findViewById<Button>(R.id.subtractButton).setOnClickListener { updateText(strFromRes(R.string.subtractText)) }
         findViewById<Button>(R.id.equalsButton).setOnClickListener {
+            previousCalculation.text = display.text
             val expression = Expression(display.text.toString()
                 .replace(strFromRes(R.string.multiplyText), "*")
                 .replace(strFromRes(R.string.divideText), "/"))
             display.setText(expression.calculate().toString())
+            display.setSelection(display.text.length)
         }
 
-        findViewById<Button>(R.id.clearButton).setOnClickListener { display.setText("") }
+        findViewById<Button>(R.id.clearButton).setOnClickListener {
+            display.setText("")
+            previousCalculation.text = ""
+        }
         findViewById<ImageButton>(R.id.backspaceButton).setOnClickListener {
             val cursorPosition = display.selectionStart
             if (cursorPosition == 0) return@setOnClickListener

@@ -10,11 +10,12 @@
         android:id="@+id/previousCalculationView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
         android:textColor="@color/white"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/displayEditText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ToolsText" />
 
     <EditText
         android:id="@+id/displayEditText"
@@ -23,16 +24,15 @@
         android:layout_marginBottom="40dp"
         android:hint="@string/displayHint"
         android:importantForAutofill="no"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp"
         android:inputType="textPersonName"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         android:textAlignment="textEnd"
         android:textColor="@color/white"
         android:textColorHint="@color/greyAccent"
         android:textSize="48sp"
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -244,8 +244,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
-            android:minHeight="48dp"
             android:contentDescription="@string/backspace_content_description"
+            android:minHeight="48dp"
             android:src="@drawable/backspace"
             android:textColor="@color/tanAccent"
             app:layout_constraintBottom_toTopOf="@+id/divideButton"
