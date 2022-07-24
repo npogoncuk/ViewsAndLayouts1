@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_constraint_layout.xml" value="0.253125" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/app_background.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/arithmetic_button_background.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/backspace.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/button_background.xml" value="0.4" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/clear_button_background.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/equals_button_background.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/drawable/ic_deleleleeee.xml" value="0.163" />
+        <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_constraint_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_grid_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_linear_layout.xml" value="0.25416666666666665" />
         <entry key="..\:/AndroidStudioProjects/Epam/ViewsAndLayouts/ViewsAndLayouts1/app/src/main/res/layout/activity_calculator_relative_layout.xml" value="0.253125" />

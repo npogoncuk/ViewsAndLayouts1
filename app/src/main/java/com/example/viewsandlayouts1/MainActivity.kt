@@ -8,6 +8,7 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.viewsandlayouts1.databinding.ActivityCalculatorConstraintLayoutBinding
 import com.example.viewsandlayouts1.databinding.ActivityMainBinding
 
 private const val LinearLayoutString = "LinearLayout"
