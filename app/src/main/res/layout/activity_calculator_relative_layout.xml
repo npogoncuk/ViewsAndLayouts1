@@ -9,6 +9,7 @@
 
     <TextView
         android:id="@+id/previousCalculationView"
+        style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -113,27 +114,20 @@
 
         <Button
             android:id="@+id/button7"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
             android:layout_below="@id/clearButton"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background"
             android:text="@string/sevenText"
-            android:textColor="@color/tanAccent"
-            android:textSize="28sp" />
+            style="@style/number_button_style" />
 
         <Button
             android:id="@+id/button8"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
             android:layout_below="@id/clearButton"
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
+            style="@style/number_button_style"
             android:layout_toEndOf="@id/button7"
-            android:background="@drawable/button_background"
             android:text="@string/eightText"
-            android:textColor="@color/tanAccent"
-            android:textSize="28sp"
             app:layout_constraintStart_toEndOf="@+id/button7"
             app:layout_constraintTop_toTopOf="@+id/button7" />
 

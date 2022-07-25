@@ -28,44 +28,58 @@ class CalculatorActivity : AppCompatActivity() {
         setClickListeners()
     }
 
+    private fun AppCompatActivity.findButton(@IdRes id: Int, onClickEvent: () -> Unit) =
+        findViewById<Button>(id).setOnClickListener { onClickEvent() }
+
     private fun setClickListeners() {
         fun strFromRes(@IdRes id: Int) = resources.getString(id)
 
-        fun updateText(stringToAdd: String) {
+        fun updateText(@IdRes id: Int) {
+            val stringToAdd: String = strFromRes(id)
             val oldText = display.text.toString()
             val cursorPosition = display.selectionStart
-            display.setText(String.format("%s%s%s",oldText.substring(0, cursorPosition), stringToAdd, oldText.substring(cursorPosition)))
+            display.setText(
+                String.format(
+                    "%s%s%s",
+                    oldText.substring(0, cursorPosition),
+                    stringToAdd,
+                    oldText.substring(cursorPosition)
+                )
+            )
             display.setSelection(cursorPosition + stringToAdd.length)
         }
 
-        findViewById<Button>(R.id.decimalButton).setOnClickListener { updateText(strFromRes(R.string.decimalText)) }
-        findViewById<Button>(R.id.button0).setOnClickListener { updateText(strFromRes(R.string.zeroText)) }
-        findViewById<Button>(R.id.button1).setOnClickListener { updateText(strFromRes(R.string.oneText)) }
-        findViewById<Button>(R.id.button2).setOnClickListener { updateText(strFromRes(R.string.twoText)) }
-        findViewById<Button>(R.id.button3).setOnClickListener { updateText(strFromRes(R.string.threeText)) }
-        findViewById<Button>(R.id.button4).setOnClickListener { updateText(strFromRes(R.string.fourText)) }
-        findViewById<Button>(R.id.button5).setOnClickListener { updateText(strFromRes(R.string.fiveText)) }
-        findViewById<Button>(R.id.button6).setOnClickListener { updateText(strFromRes(R.string.sixText)) }
-        findViewById<Button>(R.id.button7).setOnClickListener { updateText(strFromRes(R.string.sevenText)) }
-        findViewById<Button>(R.id.button8).setOnClickListener { updateText(strFromRes(R.string.eightText)) }
-        findViewById<Button>(R.id.button9).setOnClickListener { updateText(strFromRes(R.string.nineText)) }
-        findViewById<Button>(R.id.openParenthesesButton).setOnClickListener { updateText(strFromRes(R.string.parenthesesOpenText)) }
-        findViewById<Button>(R.id.closeParenthesesButton).setOnClickListener { updateText(strFromRes(R.string.parenthesesCloseText)) }
+        findButton(R.id.decimalButton) { updateText(R.string.decimalText) }
+        findButton(R.id.button0) { updateText(R.string.zeroText) }
+        findButton(R.id.button1) { updateText(R.string.oneText) }
+        findButton(R.id.button2) { updateText(R.string.twoText) }
+        findButton(R.id.button3) { updateText(R.string.threeText) }
+        findButton(R.id.button4) { updateText(R.string.fourText) }
+        findButton(R.id.button5) { updateText(R.string.fiveText) }
+        findButton(R.id.button6) { updateText(R.string.sixText) }
+        findButton(R.id.button7) { updateText(R.string.sevenText) }
+        findButton(R.id.button8) { updateText(R.string.eightText) }
+        findButton(R.id.button9) { updateText(R.string.nineText) }
+        findButton(R.id.openParenthesesButton) { updateText(R.string.parenthesesOpenText) }
+        findButton(R.id.closeParenthesesButton) { updateText(R.string.parenthesesCloseText) }
 
-        findViewById<Button>(R.id.divideButton).setOnClickListener { updateText(strFromRes(R.string.divideText)) }
-        findViewById<Button>(R.id.multiplyButton).setOnClickListener { updateText(strFromRes(R.string.multiplyText)) }
-        findViewById<Button>(R.id.addButton).setOnClickListener { updateText(strFromRes(R.string.addText)) }
-        findViewById<Button>(R.id.subtractButton).setOnClickListener { updateText(strFromRes(R.string.subtractText)) }
-        findViewById<Button>(R.id.equalsButton).setOnClickListener {
+        findButton(R.id.divideButton) { updateText(R.string.divideText) }
+        findButton(R.id.multiplyButton) { updateText(R.string.multiplyText) }
+        findButton(R.id.addButton) { updateText(R.string.addText) }
+        findButton(R.id.subtractButton) { updateText(R.string.subtractText) }
+
+        findButton(R.id.equalsButton) {
             previousCalculation.text = display.text
-            val expression = Expression(display.text.toString()
-                .replace(strFromRes(R.string.multiplyText), "*")
-                .replace(strFromRes(R.string.divideText), "/"))
+            val expression = Expression(
+                display.text.toString()
+                    .replace(strFromRes(R.string.multiplyText), "*")
+                    .replace(strFromRes(R.string.divideText), "/")
+            )
             display.setText(expression.calculate().toString())
             display.setSelection(display.text.length)
         }
 
-        findViewById<Button>(R.id.clearButton).setOnClickListener {
+        findButton(R.id.clearButton) {
             display.setText("")
             previousCalculation.text = ""
         }
